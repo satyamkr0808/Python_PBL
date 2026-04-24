@@ -1,45 +1,58 @@
 # Python_PBL
-This repo contains phase wise work of Python PBL(PCS253) of TeamId:PY-PT17 with members:
-Saksham Jain(17)-Team Leader 
-Satyam Kumar(22) 
-Ayush Kumar Verma(36).
+# This repo contains phase wise work of Python PBL(PCS253) of TeamId:PY-PT17 with members:
+# Saksham Jain(17)-Team Leader 
+# Satyam Kumar(22) 
+# Ayush Kumar Verma(36).
 
 
 
 ***
 
-# Institutional Energy Usage Prediction 
+# Institutional Energy Usage Analysis and Prediction System 
+
+**Course:** PBL PCS253 | **Problem ID:** 23  
+**Team Members:** Saksham Jain (2028479), Satyam Kumar (2028488), Ayush Kumar Verma (2028684)  
+**Section:** P (G1)
 
 ##  Project Overview
-This project is an end-to-end machine learning regression system designed to analyze and predict energy usage within an institutional setting. By leveraging numerical data such as the time of day, occupancy, ambient temperature, and appliance utilization, this system aims to accurately forecast energy demands. 
+Energy management in large institutions is a significant challenge due to fluctuating occupancy and varying environmental conditions. This project is an end-to-end machine learning regression system designed to address this by accurately forecasting energy consumption. 
 
-The project demonstrates a complete machine learning lifecycle, from raw data acquisition and preprocessing to advanced feature selection and predictive modeling.
-
-##  Key Features & Workflow
-
-### 1. Data Collection & Preprocessing
-* **Dataset:** Utilizes a numerical dataset focused on institutional energy metrics (time of day, number of students present, ambient temperature, and appliance usage).
-* **Data Cleaning:** Handles missing values and removes inconsistencies to ensure high data quality.
-* **Normalization & Transformation:** Applies scaling and transformation techniques so features are uniformly processed by the machine learning algorithms.
-
-### 2. Exploratory Data Analysis (EDA)
-* **Pattern Recognition:** Analyzes daily and seasonal energy consumption trends.
-* **Outlier Detection:** Identifies and handles anomalous energy spikes or drops.
-* **Visualizations:** Utilizes line plots for time-series trends, histograms for distribution analysis, and correlation heatmaps to understand feature relationships.
-
-### 3. Feature Engineering & Selection
-Based on insights gathered during EDA, the following techniques are used to reduce dimensionality and improve model performance:
-* **Principal Component Analysis (PCA)**
-* **Forward Feature Selection**
-* **Backward Feature Elimination**
-
-### 4. Predictive Modeling
-* **Algorithm:** Implements a robust machine learning regression model (e.g., Linear Regression, Random Forest, or Gradient Boosting).
-* **Evaluation:** The model is rigorously evaluated using standard regression metrics (such as RMSE, MAE, and R² Score) to ensure accurate and reliable energy predictions.
+By leveraging institutional numerical data—such as time of day, number of students present, ambient temperature, and appliance utilization—this system helps administrators optimize HVAC systems, schedule appliance usage efficiently, and implement cost-saving sustainability measures.
 
 ---
 
-## 🛠️ Technologies Used
+##  Repository Structure & Workflow
+
+The project is structured into distinct phases, taking the data from its raw state to a fully evaluated predictive model.
+
+###  Phase 1: Project Synopsis & Data Preprocessing
+This phase focuses on data cleaning, handling missing values, and engineering features to ensure high data quality.
+* **`Synopsis_PCS253.pdf`**: The official project proposal outlining the problem statement, objectives, and proposed methodology.
+* **`institutional_energy(1).csv`**: The initial, unprocessed raw dataset.
+* **`preprocess(1).ipynb`**: The Jupyter Notebook containing the data preprocessing pipeline. It covers handling missing data, normalizing/scaling features, and performing feature selection using Forward Selection and Principal Component Analysis (PCA).
+* **`preprocessed_data.csv`**: The cleaned dataset containing the subset of optimally selected features.
+* **`preprocessed_data_pca.csv`**: The cleaned dataset transformed using PCA for dimensionality reduction.
+
+###  Phase 2: Model Training & Evaluation
+This phase focuses on building, training, and evaluating various machine learning regression models on the preprocessed datasets.
+* **`Model_Train.ipynb`**: The core machine learning notebook. It evaluates multiple regression algorithms on both the standard feature-selected dataset and the PCA-transformed dataset to determine the best predictive performance.
+
+---
+
+##  Final Results & Model Performance
+
+After rigorous training and cross-validation on the preprocessed data, the models were evaluated using MAE, RMSE, and R² Score. 
+
+The **Support Vector Regressor (SVR)** emerged as the best-performing model overall, successfully learning the complex, non-linear relationships between institutional factors and energy consumption.
+
+**Best Model Overall: Support Vector Regressor (SVR)**
+* **Best R² Score:** `0.3706`
+* **Best Root Mean Squared Error (RMSE):** `67.9893`
+* **Best Mean Absolute Error (MAE):** `31.4994`
+
+---
+
+##  Technologies Used
 * **Language:** Python 3.x
 * **Data Manipulation:** Pandas, NumPy
 * **Machine Learning:** Scikit-Learn
@@ -56,9 +69,12 @@ Make sure you have Python installed. You can install the required dependencies u
 pip install pandas numpy scikit-learn matplotlib seaborn
 ```
 
-
+### Execution
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. **Run Preprocessing:** Open and run `preprocess(1).ipynb` to generate the cleaned datasets.
+4. **Run Modeling:** Open and run `Model_Train.ipynb` to train the models and reproduce the evaluation metrics.
 
 ##  Results & Conclusion
-**(You can update this section once your model is trained)* *
 * Successfully identified that `[Feature X]` and `[Feature Y]` are the strongest predictors of institutional energy consumption.
 * The final regression model achieved an R² score of `[X.XX]` and an RMSE of `[X.XX]`, demonstrating strong predictive capabilities.
