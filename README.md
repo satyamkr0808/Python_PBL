@@ -8,14 +8,14 @@ Ayush Kumar Verma(36).
 
 ***
 
-# Institutional Energy Usage Prediction ⚡
+# Institutional Energy Usage Prediction 
 
-## 📖 Project Overview
+##  Project Overview
 This project is an end-to-end machine learning regression system designed to analyze and predict energy usage within an institutional setting. By leveraging numerical data such as the time of day, occupancy, ambient temperature, and appliance utilization, this system aims to accurately forecast energy demands. 
 
 The project demonstrates a complete machine learning lifecycle, from raw data acquisition and preprocessing to advanced feature selection and predictive modeling.
 
-## ✨ Key Features & Workflow
+##  Key Features & Workflow
 
 ### 1. Data Collection & Preprocessing
 * **Dataset:** Utilizes a numerical dataset focused on institutional energy metrics (time of day, number of students present, ambient temperature, and appliance usage).
